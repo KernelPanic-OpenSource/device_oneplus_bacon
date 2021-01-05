@@ -185,11 +185,11 @@ TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_MAX_BRIGHTNESS := 255
 BOARD_SUPPRESS_EMMC_WIPE := true
 TW_UNMOUNT_FIRMWARE_ON_BOOT := true
-TWHAVE_SELINUX := true
+TW_HAVE_SELINUX := true
 
 #MultiROM config. MultiROM also uses parts of TWRP config
 TARGET_RECOVERY_IS_MULTIROM := true
-MR_NO_KEXEC := enabled
+MR_NO_KEXEC := true
 MR_CONTINUOUS_FB_UPDATE := true
 MR_INPUT_TYPE := type_b
 MR_INIT_DEVICES := $(PLATFORM_PATH)/multirom/mr_init_devices.c
@@ -208,7 +208,7 @@ MR_QCOM_OVERLAY_HEAP_ID_MASK := 2
 MR_INFOS := $(PLATFORM_PATH)/multirom/mrom_infos
 MR_DEVICE_SPECIFIC_VERSION := e
 MR_DEVICE_VARIANTS := bacon A0001 oneplus OnePlus ONE
-MR_ENCRYPTION := true
+# MR_ENCRYPTION := true
 # bootmenu
 DEVICE_RESOLUTION := 1080x1920
 MR_PIXEL_FORMAT := "ABGR_8888"
