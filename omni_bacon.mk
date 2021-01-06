@@ -13,7 +13,9 @@
 # limitations under the License.
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+$(call inherit-product, build/target/product/embedded.mk)
 
 # Inherit from bacon device
 $(call inherit-product, device/oneplus/bacon/bacon.mk)
@@ -22,7 +24,8 @@ $(call inherit-product, device/oneplus/bacon/bacon.mk)
 #$(call inherit-product, vendor/omni/config/nfc_enhanced.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common_full_phone.mk)
+# $(call inherit-product, vendor/omni/config/common_full_phone.mk)
+$(call inherit-product, vendor/omni/config/common.mk)
 
 PRODUCT_NAME := omni_bacon
 PRODUCT_DEVICE := bacon
