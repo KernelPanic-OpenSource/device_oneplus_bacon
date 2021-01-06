@@ -222,7 +222,7 @@ MR_REC_VERSION := $(shell date -u +%Y%m%d)-01
 MR_POPULATE_BY_NAME_PATH := "/dev/block/platform/msm_sdcc.1/by-name"
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
+# include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
     $(PLATFORM_PATH)/sepolicy
