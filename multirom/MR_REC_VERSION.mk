@@ -45,7 +45,7 @@ cmd_post_run += fi;
 cmd_post_run += $(cmd_put_out)
 
 #rename command
-cmd_ren_rec_img  := echo -ne "\n\nMR_REC_VERSION.mk: Rename output file " 1>&2; mv -v "$(ANDROID_PRODUCT_OUT)/recovery.img" "$(ANDROID_PRODUCT_OUT)/TWRP_multirom_$(TARGET_DEVICE)_`cat $(MR_REC_BUILD_NUMBER_FILE)`.img" 1>&2;
+cmd_ren_rec_img  := echo -ne "\n\nMR_REC_VERSION.mk: Rename output file " 1>&2; mv -v "$(PRODUCT_OUT)/recovery.img" "$(PRODUCT_OUT)/TWRP_multirom_$(TARGET_DEVICE)_`cat $(MR_REC_BUILD_NUMBER_FILE)`.img" 1>&2;
 
 
 #if the build number file doesnt exist create it as 01, if it does then check date
