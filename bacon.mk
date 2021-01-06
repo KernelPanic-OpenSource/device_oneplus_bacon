@@ -93,15 +93,15 @@ PRODUCT_PACKAGES += \
     liboverlay
 
 # GPS
-PRODUCT_PACKAGES += \
-    gps.msm8974
+# PRODUCT_PACKAGES += \
+#     gps.msm8974
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/gps/flp.conf:system/etc/flp.conf \
-    $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf \
-    $(LOCAL_PATH)/gps/izat.conf:system/etc/izat.conf \
-    $(LOCAL_PATH)/gps/quipc.conf:system/etc/quipc.conf \
-    $(LOCAL_PATH)/gps/sap.conf:system/etc/sap.conf
+# PRODUCT_COPY_FILES += \
+#     $(LOCAL_PATH)/gps/flp.conf:system/etc/flp.conf \
+#     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf \
+#     $(LOCAL_PATH)/gps/izat.conf:system/etc/izat.conf \
+#     $(LOCAL_PATH)/gps/quipc.conf:system/etc/quipc.conf \
+#     $(LOCAL_PATH)/gps/sap.conf:system/etc/sap.conf
 
 # IPC router config
 PRODUCT_COPY_FILES += \
