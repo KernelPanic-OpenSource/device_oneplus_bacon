@@ -187,7 +187,7 @@ BOARD_SUPPRESS_EMMC_WIPE := true
 TW_UNMOUNT_FIRMWARE_ON_BOOT := true
 TW_HAVE_SELINUX := true
 
-#MultiROM config. MultiROM also uses parts of TWRP config
+# MultiROM config. MultiROM also uses parts of TWRP config
 TARGET_RECOVERY_IS_MULTIROM := true
 MR_NO_KEXEC := true
 MR_CONTINUOUS_FB_UPDATE := true
@@ -206,19 +206,22 @@ MR_QCOM_OVERLAY_HEADER := $(PLATFORM_PATH)/multirom/mr_qcom_overlay.h
 MR_QCOM_OVERLAY_CUSTOM_PIXEL_FORMAT := MDP_RGBX_8888
 MR_QCOM_OVERLAY_HEAP_ID_MASK := 2
 MR_INFOS := $(PLATFORM_PATH)/multirom/mrom_infos
-MR_DEVICE_SPECIFIC_VERSION := KernelPanic
+MR_DEVICE_SPECIFIC_VERSION := -KernelPanic
 MR_DEVICE_VARIANTS := bacon A0001 oneplus OnePlus ONE
 # MR_ENCRYPTION := true
+
 # bootmenu
 DEVICE_RESOLUTION := 1080x1920
 MR_PIXEL_FORMAT := "ABGR_8888"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
+
 # Versioning
 include $(PLATFORM_PATH)/multirom/MR_REC_VERSION.mk
 BOARD_MKBOOTIMG_ARGS += --board mrom$(MR_REC_VERSION)
 MR_REC_VERSION := $(shell date -u +%Y%m%d)-01
-#Force populating /dev/block/platform/msm_sdcc.1/by-name
-#from the emmc
+
+# Force populating /dev/block/platform/msm_sdcc.1/by-name
+# from the emmc
 MR_POPULATE_BY_NAME_PATH := "/dev/block/platform/msm_sdcc.1/by-name"
 
 # SELinux
